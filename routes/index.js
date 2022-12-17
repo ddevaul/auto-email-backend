@@ -13,7 +13,8 @@ router.post('/fullresponse', async (req, res, next) => {
     body: JSON.stringify({ 
       prompt: `response to this email '${req.body.state.received}'
       with another email addressed to ${req.body.state.recipient} from 
-      ${req.body.state.sender} while making sure to say ${req.body.state.coremessage}
+      ${req.body.state.sender} while making sure to elaborate on
+       ${req.body.state.coremessage}
       `,
       model: "text-davinci-003",
       max_tokens: 100,
